@@ -59,7 +59,7 @@ public class Run
         esperar = leerC.nextLine();
         crupier.limpiar();
         
-        for(int j = 0; j < 2 ; j++){
+        for(int j = 0; j < 10 ; j++){
             mayor = 0;pm = 0; c = 0;
             iguales.clear(); iguales2.clear();
             

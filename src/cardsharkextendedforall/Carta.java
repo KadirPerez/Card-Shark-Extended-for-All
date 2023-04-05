@@ -3,33 +3,17 @@ package cardsharkextendedforall;
 public class Carta {
   
   private int valor;
-  
-  public Carta(){
-  }
-  
-  public int getValor() {
-    return valor;
-  }
-
-
-  public Figura getFigura() {
-    return figura;
-  }
   private Figura figura;
+
+  public Carta(){}
   
-  public Color getColor() {
-    return((figura == Figura.CORAZONES || figura == Figura.DIAMANTES)? Color.ROJO : Color.NEGRO);
-  }
-
-
   public Carta(int valor, Figura figura) throws FueraDeRangoException{
     if(valor <1 || valor > 13)
       throw new FueraDeRangoException("Valor "+valor+ " fuera de rango");
     this.valor = valor;
     this.figura = figura;
   }
-
-
+  
   public Carta(String valor, Figura figura) throws FueraDeRangoException{
     valor = valor.toUpperCase();
     if(!valor.equals("K") && !valor.equals("Q") && !valor.equals("J") && !valor.equals("A"))
@@ -37,7 +21,18 @@ public class Carta {
     this.valor = (valor.equals("K")?13:valor.equals("Q")?12:valor.equals("J")?11:1);
     this.figura = figura;
   }
+  
+  public int getValor() {
+    return valor;
+  }
 
+  public Figura getFigura() {
+    return figura;
+  }
+  
+  public Color getColor() {
+    return((figura == Figura.CORAZONES || figura == Figura.DIAMANTES)? Color.ROJO : Color.NEGRO);
+  }
 
   @Override
   public String toString() {

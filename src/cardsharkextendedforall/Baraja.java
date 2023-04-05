@@ -13,10 +13,11 @@ public class Baraja {
     inicializa();
   }
  
+ 
   public int getSize(){
     return mazo.size();  
   }
- 
+  
   private void inicializa() {
     for (Figura f: Figura.values()) {
       for( int v= 1 ; v <= 13 ; v++) {
@@ -29,11 +30,9 @@ public class Baraja {
     }
   }
 
-
   public void barajar() {
     Collections.shuffle(mazo);
   }
-
 
   public ArrayList<Carta> repartir(int n) {
     ArrayList<Carta> mano = new ArrayList<>();
@@ -42,7 +41,6 @@ public class Baraja {
     }
     return mano;
   }
-
 
   @Override
   public String toString() {

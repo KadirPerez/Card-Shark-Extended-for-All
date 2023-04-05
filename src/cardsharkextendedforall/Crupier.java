@@ -27,6 +27,14 @@ public class Crupier {
         this.cantidadBarajas = cantidadBarajas;
     }
     
+    public int getCantidadBarajas(){
+        return cantidadBarajas;
+    }
+    
+    public ArrayList getBarajas(){
+        return b;
+    }
+    
     public ArrayList<Carta> repartir(int cantidad) {
         
         ArrayList<Carta> cartasRepartidas = new ArrayList();
